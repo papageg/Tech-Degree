@@ -43,16 +43,7 @@ let quotes = [
 */
 //END OF QUOTES
 
-/*
-function listProducts(prods) {
-  let product_names = [];
-  for (i = 0; i < prods.length; i+=1) {
-    product_names.push(prods[i].name);
-  }
-  return product_names;
-}
-console.log(listProducts(products));
-*/
+
 // Create the getRandomQuote function and name it getRandomQuote
 function getRandomQuote (quo) {
   let quo_quotes = [];
