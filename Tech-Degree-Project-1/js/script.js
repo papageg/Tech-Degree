@@ -43,15 +43,25 @@ let quotes = [
 */
 //END OF QUOTES
 
-
+/*
+function listProducts(prods) {
+  let product_names = [];
+  for (i = 0; i < prods.length; i+=1) {
+    product_names.push(prods[i].name);
+  }
+  return product_names;
+}
+console.log(listProducts(products));
+*/
 // Create the getRandomQuote function and name it getRandomQuote
 function getRandomQuote (quo) {
-  let random_quote = [];
-  for (i = 0; i < quo.length; i += 1){
-
+  let quo_quotes = [];
+  for (i = 0; i < quo.length; i+=1) {
+    quo_quotes.push(quo[i].quote);
   }
+  return quo_quotes[Math.floor(Math.random() * i)];
 }
-
+console.log(getRandomQuote(quotes));
 
 // Create the printQuote funtion and name it printQuote
 function printQuote () {
