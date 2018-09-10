@@ -50,6 +50,14 @@ body {
   margin-right: 4em;
 }
 
+.catagory {
+  font-size: 1.25rem;;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: right;
+  margin-right: 4em;
+}
+
 .source:before {
   content: "—";
 }
@@ -64,11 +72,6 @@ body {
 }
 
 .year:before {
-  content: ", ";
-  font-style: normal;
-}
-
-.categor:before {
   content: ", ";
   font-style: normal;
 }
@@ -103,6 +106,9 @@ body {
     font-size: 3rem;
   }
   .source {
+    font-size: 1rem;
+  }
+  .category {
     font-size: 1rem;
   }
 }

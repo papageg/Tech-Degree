@@ -1,9 +1,15 @@
 // FSJS - Random Quote Generator
 //The object literal array that holds all 5 or more quotes.
 // Create the array of quote objects and name it quotes
-let red;
-let blue;
-let green;
+//let red = Math.floor(Math.random() * 256);;
+//let blue = Math.floor(Math.random() * 256);;
+//let green = Math.floor(Math.random() * 256);;
+
+//let red;
+
+//let green;
+
+//let blue;
 
 let quotes = [
   {
@@ -63,14 +69,32 @@ function printQuote() {
   let getQuote = getRandomQuote();
   let sendHtml = '<p class="quote">'+ getQuote.quote +'</p>';
   sendHtml += '<p class="source">'+ getQuote.name + '</p>';
-  sendHtml += '<p class="catagor">'+ getQuote.category + '</p>';
+  sendHtml += '<p class="catagory">'+ "( " + getQuote.category + " )" + '</p>';
   document.getElementById("quote-box").innerHTML = sendHtml;
+
 }
 /* printQuote function will use the getRandomQuote function and add
 it the the paragrah with the class of quote and the name to the source class
 then adding the category.
-
 */
+function getRandomColor() {
+  let genNumbers;
+  //red = (Math.floor(Math.random()*256));
+  //blue = (Math.floor(Math.random()*256));
+  //green = (Math.floor(Math.random()*256));
+  genNumbers = 'rgb(' + Math.floor(Math.random()*256) + ',' + Math.floor(Math.random()*256) + ',' + Math.floor(Math.random()*256) + ')';
+  return genNumbers;
+}
+function printRandomColor () {
+  let rgbs = document.getElementById('bgColor').style.backgroundColor=getRandomColor();
+  return rgbs;
+}
+
+function changeQAndC () {
+  let addUp = printQuote() + printRandomColor();
+  return addUp;
+}
+
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+document.getElementById('loadQuote').addEventListener("click", changeQAndC, false);
